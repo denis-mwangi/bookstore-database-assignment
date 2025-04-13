@@ -386,7 +386,7 @@ GRANT SELECT, INSERT, UPDATE ON bookStore.customerAddress TO 'salesAgent';
 
 GRANT SELECT ON bookStore.* TO 'dataAnalyst';
 
--- ======== CREATING THE SAMPLE USERS
+-- ======== CREATING THE SAMPLE USERS ========
 CREATE USER 'adminUser'@'localhost' IDENTIFIED BY 'StrongPassword1!';
 CREATE USER 'imma'@'%' IDENTIFIED BY 'pass123';
 CREATE USER 'suzzy'@'%' IDENTIFIED BY 'pass12';
