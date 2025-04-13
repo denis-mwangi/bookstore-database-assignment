@@ -367,3 +367,21 @@ INSERT INTO orderHistory (orderId, orderStatusId, statusDate, notes) VALUES
 (10, 4, '2025-04-10 17:55:00', 'Order canceled by customer request.'),
 (10, 1, '2025-04-10 09:00:00', 'Initial order recorded.'),
 (10, 2, '2025-04-10 10:30:00', 'Payment processed before cancellation.');
+
+-- ======== SETTING  USER ROLES =======
+CREATE ROLE 'bookAdmin'; 
+CREATE ROLE 'bookManager';
+CREATE ROLE 'salesAgent';
+CREATE ROLE 'dataAnaLys';
+
+-- ======== GRANTING PRIVILEGES TO ROLES ========
+GRANT ALL PRIVILEGES ON bookStore.* TO 'bookAdmin';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON bookStore.* TO 'bookManager';
+
+GRANT SELECT, INSERT, UPDATE ON bookStore.custOrder TO 'salesAgent';
+GRANT SELECT, INSERT, UPDATE ON bookStore.orderLine TO 'salesAgent';
+GRANT SELECT, INSERT, UPDATE ON bookStore.customer TO 'salesAgent';
+GRANT SELECT, INSERT, UPDATE ON bookStore.customerAddress TO 'salesAgent';
+
+GRANT SELECT ON bookStore.* TO 'dataAnalyst';
