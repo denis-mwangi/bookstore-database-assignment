@@ -385,3 +385,14 @@ GRANT SELECT, INSERT, UPDATE ON bookStore.customer TO 'salesAgent';
 GRANT SELECT, INSERT, UPDATE ON bookStore.customerAddress TO 'salesAgent';
 
 GRANT SELECT ON bookStore.* TO 'dataAnalyst';
+
+-- ======== CREATING THE SAMPLE USERS
+CREATE USER 'adminUser'@'localhost' IDENTIFIED BY 'StrongPassword1!';
+CREATE USER 'imma'@'%' IDENTIFIED BY 'pass123';
+CREATE USER 'suzzy'@'%' IDENTIFIED BY 'pass12';
+CREATE USER 'denoe'@'%' IDENTIFIED BY 'pass1';
+
+GRANT 'bookAdmin' TO 'adminUser'@'localhost';
+GRANT 'bookManager' TO 'imma'@'%';
+GRANT 'salesAgent' TO 'suzzy'@'%';
+GRANT 'dataAnalyst' TO 'denoe'@'%';
