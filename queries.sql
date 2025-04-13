@@ -49,22 +49,26 @@ INSERT INTO publisher (publisherName, contact) VALUES
 ('Starlight Press', 'hello@starlightpress.com'),
 ('Quantum Quill Publications', 'contact@quantumquill.com');
 
+-- INSERTING INTO BOOKLANGUAGE TABLE
 INSERT INTO bookLanguage (languageName) VALUES
 ('English'),
 ('Spanish'),
 ('French'),
 ('German');
 
+-- INSERTING INTO COUNTRY TABLE
 INSERT INTO country (countryName, continent) VALUES
 ('United States', 'North America'),
 ('United Kingdom', 'Europe'),
 ('Canada', 'North America'),
 ('Kenya', 'Africa');
 
+-- INSERYING INTO ADDRESSSTATUS
 INSERT INTO addressStatus (statsuDescription) VALUES
 ('Current'),
 ('Old');
 
+-- INSERTING INTO SHIPPING METHOD
 INSERT INTO shippingMethod (methodName, cost) VALUES
 ('Stardust Standard', 4.99),
 ('Moonbeam Express', 9.99),
