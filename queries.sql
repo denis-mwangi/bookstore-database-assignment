@@ -1,0 +1,7 @@
+--  CREATING THE DATABASE
+
+CREATE DATABASE bookStore;
+
+-- USING THE DATABASE
+
+USE bookStore;
